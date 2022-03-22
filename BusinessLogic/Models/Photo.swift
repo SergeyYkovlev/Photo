@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-final class Photos: Decodable {
+final class Photo: Decodable {
     var id: String
     var width: Int
     var height: Int

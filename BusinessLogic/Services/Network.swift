@@ -10,7 +10,7 @@ import Foundation
 class NetworkService {
     private let token = "dB86dZXCRtPvOOvW1PS0oQyrIWb5jCIjo780ltUgpwI"
     private let page = 1
-    func requestPhotos(completion: @escaping (Result<[Photos], Error>) -> Void) {
+    func requestPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
         let urlString = "https://api.unsplash.com/photos/?client_id=\(token)&\(page)"
         guard let url = URL(string: urlString) else {
             return
@@ -25,7 +25,7 @@ class NetworkService {
                     return
                 }
                 do {
-                    let photos = try JSONDecoder().decode([Photos].self, from: data)
+                    let photos = try JSONDecoder().decode([Photo].self, from: data)
                     completion(.success(photos))
                 }
                 catch let jsonError {
