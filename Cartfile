@@ -1,0 +1,3 @@
+github "rosberry/Framezilla"
+github "ReshetovE/CVT"
+github "onevcat/Kingfisher" ~> 7.0
