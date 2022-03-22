@@ -43,5 +43,4 @@ final class PhotoModule {
         self.viewController = viewController
         self.presenter = presenter
     }
-
 }

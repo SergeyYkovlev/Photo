@@ -6,21 +6,20 @@
 //
 
 import Foundation
-import UIKit
 import CoreLocation
 
 final class PhotoPresenter {
-
-     var view: PhotoViewInput?
+    
+    var view: PhotoViewInput?
     weak var output: PhotoModuleOutput?
-
+    
     var state: PhotoState
     private let networkService = NetworkService()
-
+    
     init(state: PhotoState) {
         self.state = state
     }
-
+    
 }
 
 extension PhotoPresenter: PhotoViewOutput {

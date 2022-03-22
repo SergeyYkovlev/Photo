@@ -11,7 +11,7 @@ import  UIKit
 class MainCoordinator: BaseCoordinator <UINavigationController> {
 
     let window: UIWindow
-    let fotoModule = PhotoModule()
+    let photoModule = PhotoModule()
 
     init(window: UIWindow) {
         self.window = window
@@ -22,8 +22,8 @@ class MainCoordinator: BaseCoordinator <UINavigationController> {
     }
 
     override func start() {
-        fotoModule.output = self
-        rootViewController.pushViewController(fotoModule.viewController, animated: true)
+        photoModule.output = self
+        rootViewController.pushViewController(photoModule.viewController, animated: true)
     }
 }
 
