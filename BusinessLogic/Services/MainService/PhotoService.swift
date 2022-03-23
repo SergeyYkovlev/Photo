@@ -9,7 +9,7 @@ import Foundation
 
 protocol HasPhotoService {
 
-    var mainService: PhotoService { get }
+    var photoService: PhotoService { get }
 }
 
 protocol PhotoService: AnyObject {

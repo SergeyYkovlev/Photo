@@ -8,7 +8,7 @@
 import Foundation
 
 enum PhotoEndpoint {
-    case mainPhoto(_ page: Int)
+    case mainPhotos(_ page: Int)
     static var token = "yTsBvTOVn8J6qUgrOtA3qmAQjureSk5r6NvtofZ8mtI"
 }
 
@@ -19,7 +19,7 @@ extension PhotoEndpoint: AppEndpoint {
 
     var path: String {
         switch self {
-        case .mainPhoto:
+        case .mainPhotos:
             return "photos"
         }
     }
@@ -36,7 +36,7 @@ extension PhotoEndpoint: AppEndpoint {
         var param : [String: String] = [:]
         param["client_id"] = PhotoEndpoint.token
         switch self {
-        case .mainPhoto(let page):
+        case .mainPhotos(let page):
             param["page"] = String(page)
             return param
         }

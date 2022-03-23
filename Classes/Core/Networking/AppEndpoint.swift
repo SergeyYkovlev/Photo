@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  translator
+//  Photo
 //
-//  Created by Сергей Яковлев on 02.03.2022.
+//  Created by Сергей Яковлев on 22.03.2022.
 //
 
 import Foundation
@@ -15,6 +15,6 @@ protocol AppEndpoint: Endpoint {
 extension Endpoint {
 
     var baseURL: URL {
-        return URL(string: "https://dictionary.skyeng.ru/api/public/v1")!
+        return URL(string: "https://api.unsplash.com/")!
     }
 }

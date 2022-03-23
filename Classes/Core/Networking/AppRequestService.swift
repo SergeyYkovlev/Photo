@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  translator
+//  Photo
 //
-//  Created by Сергей Яковлев on 02.03.2022.
+//  Created by Сергей Яковлев on 22.03.2022.
 //
 
 import Foundation

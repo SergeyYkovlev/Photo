@@ -9,9 +9,9 @@ import Foundation
 
 final class PhotoServiceImpl: AppRequestService, PhotoService {
     func fetchPhotos(page: Int, success: (([Photo]) -> Void)?, failure: (() -> Void)?) {
-        request(PhotoEndpoint.mainPhoto(page), success: { (photo: [Photo]) in
+        request(PhotoEndpoint.mainPhotos(page), success: { (photos: [Photo]) in
             DispatchQueue.main.async {
-                success?(photo)
+                success?(photos)
             }
         }, failure: nil)
     }
