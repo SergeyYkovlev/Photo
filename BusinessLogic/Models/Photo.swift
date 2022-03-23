@@ -2,10 +2,11 @@
 //  Photo.swift
 //  Photo
 //
-//  Created by Сергей Яковлев on 22.03.2022.
+//  Created by Сергей Яковлев on 23.03.2022.
 //
 
 import Foundation
+import UIKit
 
 final class Photo: Decodable {
     var id: String

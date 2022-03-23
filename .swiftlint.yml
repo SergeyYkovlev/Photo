@@ -32,6 +32,7 @@ identifier_name:
   excluded:
     - id
     - URL
+    - per_page
 
 statement_position:
    statement_mode: uncuddled_else

@@ -9,21 +9,28 @@ import Foundation
 import CoreLocation
 
 final class PhotoPresenter {
-    
+    typealias Dependencies = Any
+
     var view: PhotoViewInput?
     weak var output: PhotoModuleOutput?
-    
+
     var state: PhotoState
     private let networkService = NetworkService()
-    
-    init(state: PhotoState) {
+    private let dependencies: Dependencies
+    private let listItemsFactory: MainListItemsFactory
+
+    init(state: PhotoState,
+         dependencies: Dependencies,
+         listItemsFactory: MainListItemsFactory) {
         self.state = state
+        self.dependencies = dependencies
+        self.listItemsFactory = listItemsFactory
     }
-    
+
 }
 
 extension PhotoPresenter: PhotoViewOutput {
-    func requestPhoto() {
+    func viewDidLoad() {
         networkService.requestPhotos { [weak self] result in
             switch result {
             case .success(let responce):
@@ -39,7 +46,7 @@ extension PhotoPresenter: PhotoViewOutput {
 
 extension PhotoPresenter: PhotoModuleInput {
     func update(force: Bool, animated: Bool) {
-        let viewModel = PhotoViewModel()
+        let viewModel = PhotoViewModel(state: state, listItemsFactory: listItemsFactory)
         view?.update(with: viewModel, force: force, animated: animated)
     }
 }

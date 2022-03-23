@@ -34,11 +34,12 @@ final class PhotoModule {
     private let presenter: PhotoPresenter
 
     init(state: PhotoState = .init()) {
-        let presenter = PhotoPresenter(state: state)
-        let viewModel = PhotoViewModel()
+        let listItemsFactory = MainListItemsFactory()
+        let presenter = PhotoPresenter(state: state, dependencies: [Any](), listItemsFactory: listItemsFactory)
+        let viewModel = PhotoViewModel(state: state, listItemsFactory: listItemsFactory)
         let viewController = PhotoViewController(viewModel: viewModel, output: presenter)
-//        listItemsFactory.output = presenter
-//        listItemsFactory.viewController = viewController
+        listItemsFactory.output = presenter
+        listItemsFactory.viewController = viewController
         presenter.view = viewController
         self.viewController = viewController
         self.presenter = presenter
