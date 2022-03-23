@@ -6,6 +6,13 @@
 //
 
 import Foundation
+import CollectionViewTools
 
 class PhotoViewModel {
+    let listSectionItems: [GeneralCollectionViewDiffSectionItem]
+
+    init(state: PhotoState, listItemsFactory: MainListItemsFactory) {
+        listSectionItems = listItemsFactory.makeSectionItems(state: state)
+    }
+
 }

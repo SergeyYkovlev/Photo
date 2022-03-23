@@ -10,6 +10,7 @@ import Foundation
 class NetworkService {
     private let token = "dB86dZXCRtPvOOvW1PS0oQyrIWb5jCIjo780ltUgpwI"
     private let page = 1
+//    private let per_page = 35
     func requestPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
         let urlString = "https://api.unsplash.com/photos/?client_id=\(token)&\(page)"
         guard let url = URL(string: urlString) else {

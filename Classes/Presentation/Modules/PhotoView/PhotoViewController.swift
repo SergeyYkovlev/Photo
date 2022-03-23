@@ -14,7 +14,7 @@ protocol PhotoViewInput: AnyObject {
 }
 
 protocol PhotoViewOutput: AnyObject {
-    func requestPhoto()
+    func viewDidLoad()
 }
 class PhotoViewController: UIViewController {
 
@@ -48,7 +48,7 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(collectionView)
-        output.requestPhoto()
+        output.viewDidLoad()
     }
 
     override func viewDidLayoutSubviews() {
@@ -68,5 +68,6 @@ extension PhotoViewController: PhotoViewInput, ViewUpdate {
         func updateViewModel<Value: Equatable>(_ keyPath: KeyPath<PhotoViewModel, Value>, configurationBlock: (Value) -> Void) {
             update(new: viewModel, old: oldViewModel, keyPath: keyPath, force: force, configurationBlock: configurationBlock)
         }
+        collectionViewManager.update(with: viewModel.listSectionItems, animated: animated)
     }
 }
