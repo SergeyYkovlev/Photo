@@ -8,21 +8,21 @@
 import Foundation
 import UIKit
 
-protocol PhotoModuleInput: AnyObject {
-    var state: PhotoState { get }
+protocol MainModuleInput: AnyObject {
+    var state: MainState { get }
     func update(force: Bool, animated: Bool)
 }
 
-protocol PhotoModuleOutput: AnyObject {
+protocol MainModuleOutput: AnyObject {
 }
 
-final class PhotoModule {
+final class MainModule {
 
-    var input: PhotoModuleInput {
+    var input: MainModuleInput {
         return presenter
     }
 
-    var output: PhotoModuleOutput? {
+    var output: MainModuleOutput? {
         get {
             return presenter.output
         }
@@ -30,14 +30,14 @@ final class PhotoModule {
             presenter.output = newValue
         }
     }
-    let viewController: PhotoViewController
-    private let presenter: PhotoPresenter
+    let viewController: MainViewController
+    private let presenter: MainPresenter
 
-    init(state: PhotoState = .init()) {
+    init(state: MainState = .init()) {
         let listItemsFactory = MainListItemsFactory()
-        let presenter = PhotoPresenter(state: state, dependencies: [Any](), listItemsFactory: listItemsFactory)
-        let viewModel = PhotoViewModel(state: state, listItemsFactory: listItemsFactory)
-        let viewController = PhotoViewController(viewModel: viewModel, output: presenter)
+        let presenter = MainPresenter(state: state, dependencies: [Any](), listItemsFactory: listItemsFactory)
+        let viewModel = MainViewModel(state: state, listItemsFactory: listItemsFactory)
+        let viewController = MainViewController(viewModel: viewModel, output: presenter)
         listItemsFactory.output = presenter
         listItemsFactory.viewController = viewController
         presenter.view = viewController

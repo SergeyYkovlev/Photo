@@ -11,7 +11,7 @@ import  UIKit
 class MainCoordinator: BaseCoordinator <UINavigationController> {
 
     let window: UIWindow
-    let photoModule = PhotoModule()
+    let photoModule = MainModule()
 
     init(window: UIWindow) {
         self.window = window
@@ -27,6 +27,6 @@ class MainCoordinator: BaseCoordinator <UINavigationController> {
     }
 }
 
-extension MainCoordinator: PhotoModuleOutput {
+extension MainCoordinator: MainModuleOutput {
 
 }

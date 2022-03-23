@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 import CollectionViewTools
 
-protocol PhotoViewInput: AnyObject {
-    func update(with viewModel: PhotoViewModel, force: Bool, animated: Bool)
+protocol MainViewInput: AnyObject {
+    func update(with viewModel: MainViewModel, force: Bool, animated: Bool)
 }
 
-protocol PhotoViewOutput: AnyObject {
+protocol MainViewOutput: AnyObject {
     func viewDidLoad()
 }
-class PhotoViewController: UIViewController {
+class MainViewController: UIViewController {
 
-    private let output: PhotoViewOutput
-    private var viewModel: PhotoViewModel
+    private let output: MainViewOutput
+    private var viewModel: MainViewModel
 
     private lazy var collectionViewManager: CollectionViewManager = .init(collectionView: collectionView)
 
@@ -34,7 +34,7 @@ class PhotoViewController: UIViewController {
         return view
     }()
 
-    init(viewModel: PhotoViewModel, output: PhotoViewOutput) {
+    init(viewModel: MainViewModel, output: MainViewOutput) {
         self.viewModel = viewModel
         self.output = output
         super.init(nibName: nil, bundle: nil)
@@ -59,13 +59,13 @@ class PhotoViewController: UIViewController {
     }
 }
 
-extension PhotoViewController: PhotoViewInput, ViewUpdate {
-    func update(with viewModel: PhotoViewModel, force: Bool, animated: Bool) {
+extension MainViewController: MainViewInput, ViewUpdate {
+    func update(with viewModel: MainViewModel, force: Bool, animated: Bool) {
         let oldViewModel = self.viewModel
         self.viewModel = viewModel
         view.setNeedsLayout()
         view.layoutIfNeeded()
-        func updateViewModel<Value: Equatable>(_ keyPath: KeyPath<PhotoViewModel, Value>, configurationBlock: (Value) -> Void) {
+        func updateViewModel<Value: Equatable>(_ keyPath: KeyPath<MainViewModel, Value>, configurationBlock: (Value) -> Void) {
             update(new: viewModel, old: oldViewModel, keyPath: keyPath, force: force, configurationBlock: configurationBlock)
         }
         collectionViewManager.update(with: viewModel.listSectionItems, animated: animated)

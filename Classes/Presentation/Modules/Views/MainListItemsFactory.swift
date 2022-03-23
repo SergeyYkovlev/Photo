@@ -9,11 +9,11 @@ import CollectionViewTools
 
 final class MainListItemsFactory {
 
-    weak var viewController: PhotoViewController?
-    weak var output: PhotoViewOutput?
+    weak var viewController: MainViewController?
+    weak var output: MainViewOutput?
     var cellItems: [ImageCollectionViewCellItem] = []
 
-    func makeSectionItems(state: PhotoState) -> [GeneralCollectionViewDiffSectionItem] {
+    func makeSectionItems(state: MainState) -> [GeneralCollectionViewDiffSectionItem] {
         for photo in state.photos {
             let ratio: CGFloat = CGFloat(photo.width) / CGFloat(photo.height)
             let item = ImageCollectionViewCellItem(imageURL: photo.urls.regular,
