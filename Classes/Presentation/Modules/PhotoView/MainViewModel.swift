@@ -8,10 +8,10 @@
 import Foundation
 import CollectionViewTools
 
-class PhotoViewModel {
+class MainViewModel {
     let listSectionItems: [GeneralCollectionViewDiffSectionItem]
 
-    init(state: PhotoState, listItemsFactory: MainListItemsFactory) {
+    init(state: MainState, listItemsFactory: MainListItemsFactory) {
         listSectionItems = listItemsFactory.makeSectionItems(state: state)
     }
 
