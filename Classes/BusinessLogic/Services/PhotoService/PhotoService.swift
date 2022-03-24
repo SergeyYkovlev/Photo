@@ -13,5 +13,10 @@ protocol HasPhotoService {
 }
 
 protocol PhotoService: AnyObject {
-    func fetchPhotos(page: Int, success: (([Photo]) -> Void)?, failure: (() -> Void)?)
+    func fetchPhotos(page: Int, success: PhotoService.Success?, failure: PhotoService.Failure?)
+}
+
+extension PhotoService {
+    typealias Success = ([Photo]) -> Void
+    typealias Failure = (GeneralRequestError) -> Void
 }
