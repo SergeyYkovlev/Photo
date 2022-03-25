@@ -10,7 +10,7 @@
 		0C197E2627EAFFDA009F03F8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2527EAFFDA009F03F8 /* Photo.swift */; };
 		0C197E3127EB0A15009F03F8 /* GeneralRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2727EB0A15009F03F8 /* GeneralRequestError.swift */; };
 		0C197E3227EB0A15009F03F8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2827EB0A15009F03F8 /* Endpoint.swift */; };
-		0C197E3327EB0A15009F03F8 /* AppRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2927EB0A15009F03F8 /* AppRequestService.swift */; };
+		0C197E3327EB0A15009F03F8 /* AppRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2927EB0A15009F03F8 /* AppRequestFactory.swift */; };
 		0C197E3427EB0A15009F03F8 /* JSONDecoder+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2A27EB0A15009F03F8 /* JSONDecoder+Result.swift */; };
 		0C197E3527EB0A15009F03F8 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2B27EB0A15009F03F8 /* Method.swift */; };
 		0C197E3627EB0A15009F03F8 /* SessionTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E2C27EB0A15009F03F8 /* SessionTaskService.swift */; };
@@ -21,6 +21,8 @@
 		0C197E3D27EB0B5E009F03F8 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E3C27EB0B5E009F03F8 /* PhotoService.swift */; };
 		0C197E3F27EB0B75009F03F8 /* PhotoServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E3E27EB0B75009F03F8 /* PhotoServiceImpl.swift */; };
 		0C197E4127EB0B83009F03F8 /* PhotoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4027EB0B83009F03F8 /* PhotoEndpoint.swift */; };
+		0C197E4327EC4D5C009F03F8 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4227EC4D5C009F03F8 /* ServiceFactory.swift */; };
+		0C197E4527EC4DA9009F03F8 /* AppRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4427EC4DA9009F03F8 /* AppRequestService.swift */; };
 		0C20412827E9ECA500376015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20412727E9ECA500376015 /* AppDelegate.swift */; };
 		0C20412A27E9ECA500376015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20412927E9ECA500376015 /* SceneDelegate.swift */; };
 		0C20412C27E9ECA500376015 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20412B27E9ECA500376015 /* MainViewController.swift */; };
@@ -64,7 +66,7 @@
 		0C197E2527EAFFDA009F03F8 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0C197E2727EB0A15009F03F8 /* GeneralRequestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralRequestError.swift; sourceTree = "<group>"; };
 		0C197E2827EB0A15009F03F8 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		0C197E2927EB0A15009F03F8 /* AppRequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestService.swift; sourceTree = "<group>"; };
+		0C197E2927EB0A15009F03F8 /* AppRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestFactory.swift; sourceTree = "<group>"; };
 		0C197E2A27EB0A15009F03F8 /* JSONDecoder+Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Result.swift"; sourceTree = "<group>"; };
 		0C197E2B27EB0A15009F03F8 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		0C197E2C27EB0A15009F03F8 /* SessionTaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTaskService.swift; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		0C197E3C27EB0B5E009F03F8 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		0C197E3E27EB0B75009F03F8 /* PhotoServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceImpl.swift; sourceTree = "<group>"; };
 		0C197E4027EB0B83009F03F8 /* PhotoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEndpoint.swift; sourceTree = "<group>"; };
+		0C197E4227EC4D5C009F03F8 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		0C197E4427EC4DA9009F03F8 /* AppRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequestService.swift; sourceTree = "<group>"; };
 		0C20412427E9ECA500376015 /* Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C20412727E9ECA500376015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C20412927E9ECA500376015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,22 +115,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C197E3B27EB0A33009F03F8 /* MainService */ = {
+		0C197E3B27EB0A33009F03F8 /* PhotoService */ = {
 			isa = PBXGroup;
 			children = (
 				0C197E3C27EB0B5E009F03F8 /* PhotoService.swift */,
 				0C197E3E27EB0B75009F03F8 /* PhotoServiceImpl.swift */,
 				0C197E4027EB0B83009F03F8 /* PhotoEndpoint.swift */,
 			);
-			path = MainService;
+			path = PhotoService;
+			sourceTree = "<group>";
+		};
+		0C197E4827EC4F4A009F03F8 /* AppNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0C197E2E27EB0A15009F03F8 /* AppEndpoint.swift */,
+				0C197E2927EB0A15009F03F8 /* AppRequestFactory.swift */,
+				0C197E2727EB0A15009F03F8 /* GeneralRequestError.swift */,
+			);
+			path = AppNetworking;
 			sourceTree = "<group>";
 		};
 		0C20411B27E9ECA500376015 = {
 			isa = PBXGroup;
 			children = (
-				0C20413B27E9EDDF00376015 /* BusinessLogic */,
-				0C20413E27E9EE0100376015 /* Resources */,
 				0C20413F27E9EE2C00376015 /* Classes */,
+				0C20413E27E9EE0100376015 /* Resources */,
 				0C20412627E9ECA500376015 /* Photo */,
 				0C20412527E9ECA500376015 /* Products */,
 				0C20415D27E9F11D00376015 /* Frameworks */,
@@ -169,7 +182,9 @@
 		0C20413D27E9EDF100376015 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0C197E3B27EB0A33009F03F8 /* MainService */,
+				0C197E3B27EB0A33009F03F8 /* PhotoService */,
+				0C197E4227EC4D5C009F03F8 /* ServiceFactory.swift */,
+				0C197E4427EC4DA9009F03F8 /* AppRequestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -188,6 +203,7 @@
 			children = (
 				0C20412727E9ECA500376015 /* AppDelegate.swift */,
 				0C20412927E9ECA500376015 /* SceneDelegate.swift */,
+				0C20413B27E9EDDF00376015 /* BusinessLogic */,
 				0C20414027E9EE4400376015 /* Core */,
 				0C20414127E9EE4B00376015 /* Presentation */,
 			);
@@ -197,8 +213,9 @@
 		0C20414027E9EE4400376015 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0C20414227E9EE8A00376015 /* Extensions */,
 				0C20414327E9EE8F00376015 /* Networking */,
+				0C197E4827EC4F4A009F03F8 /* AppNetworking */,
+				0C20414227E9EE8A00376015 /* Extensions */,
 				0C20414427E9EEA300376015 /* ViewUpdatable */,
 				0C20414527E9EEAC00376015 /* Coordinator */,
 			);
@@ -225,16 +242,13 @@
 		0C20414327E9EE8F00376015 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0C197E2E27EB0A15009F03F8 /* AppEndpoint.swift */,
-				0C197E2927EB0A15009F03F8 /* AppRequestService.swift */,
-				0C197E2827EB0A15009F03F8 /* Endpoint.swift */,
-				0C197E2727EB0A15009F03F8 /* GeneralRequestError.swift */,
-				0C197E2D27EB0A15009F03F8 /* Header.swift */,
-				0C197E2A27EB0A15009F03F8 /* JSONDecoder+Result.swift */,
-				0C197E2B27EB0A15009F03F8 /* Method.swift */,
 				0C197E3027EB0A15009F03F8 /* RequestFactory.swift */,
-				0C197E2F27EB0A15009F03F8 /* RequestService.swift */,
+				0C197E2B27EB0A15009F03F8 /* Method.swift */,
+				0C197E2D27EB0A15009F03F8 /* Header.swift */,
 				0C197E2C27EB0A15009F03F8 /* SessionTaskService.swift */,
+				0C197E2A27EB0A15009F03F8 /* JSONDecoder+Result.swift */,
+				0C197E2F27EB0A15009F03F8 /* RequestService.swift */,
+				0C197E2827EB0A15009F03F8 /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -395,8 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -410,6 +423,7 @@
 				0C197E3927EB0A15009F03F8 /* RequestService.swift in Sources */,
 				0C20416A27E9FF3200376015 /* CollectionViewToolsCell.swift in Sources */,
 				0C197E3F27EB0B75009F03F8 /* PhotoServiceImpl.swift in Sources */,
+				0C197E4327EC4D5C009F03F8 /* ServiceFactory.swift in Sources */,
 				0C20415427E9F01100376015 /* Coordinator.swift in Sources */,
 				0C20412C27E9ECA500376015 /* MainViewController.swift in Sources */,
 				0C20412827E9ECA500376015 /* AppDelegate.swift in Sources */,
@@ -417,10 +431,11 @@
 				0C197E3427EB0A15009F03F8 /* JSONDecoder+Result.swift in Sources */,
 				0C197E3127EB0A15009F03F8 /* GeneralRequestError.swift in Sources */,
 				0C20415027E9EF4A00376015 /* MainModule.swift in Sources */,
+				0C197E4527EC4DA9009F03F8 /* AppRequestService.swift in Sources */,
 				0C197E3827EB0A15009F03F8 /* AppEndpoint.swift in Sources */,
 				0C20414C27E9EF2C00376015 /* MainState.swift in Sources */,
 				0C197E3D27EB0B5E009F03F8 /* PhotoService.swift in Sources */,
-				0C197E3327EB0A15009F03F8 /* AppRequestService.swift in Sources */,
+				0C197E3327EB0A15009F03F8 /* AppRequestFactory.swift in Sources */,
 				0C20412A27E9ECA500376015 /* SceneDelegate.swift in Sources */,
 				0C197E2627EAFFDA009F03F8 /* Photo.swift in Sources */,
 				0C197E3A27EB0A15009F03F8 /* RequestFactory.swift in Sources */,

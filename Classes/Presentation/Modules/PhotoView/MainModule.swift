@@ -35,7 +35,7 @@ final class MainModule {
 
     init(state: MainState = .init()) {
         let listItemsFactory = MainListItemsFactory()
-        let presenter = MainPresenter(state: state, dependencies: [Any](), listItemsFactory: listItemsFactory)
+        let presenter = MainPresenter(state: state, dependencies: Services, listItemsFactory: listItemsFactory)
         let viewModel = MainViewModel(state: state, listItemsFactory: listItemsFactory)
         let viewController = MainViewController(viewModel: viewModel, output: presenter)
         listItemsFactory.output = presenter

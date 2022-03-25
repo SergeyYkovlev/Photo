@@ -9,14 +9,14 @@ import Foundation
 import CoreLocation
 
 final class MainPresenter {
-    typealias Dependencies = Any
+
+    typealias Dependencies = HasPhotoService
 
     var view: MainViewInput?
     weak var output: MainModuleOutput?
 
-    let searchService: PhotoServiceImpl = .init()
-
     var state: MainState
+
     private let dependencies: Dependencies
     private let listItemsFactory: MainListItemsFactory
 
@@ -31,7 +31,7 @@ final class MainPresenter {
 
 extension MainPresenter: MainViewOutput {
     func viewDidLoad() {
-        searchService.fetchPhotos(page: 1, success: { [weak self] photo in
+        dependencies.photoService.fetchPhotos(page: 1, success: { [weak self] photo in
             self?.state.photos = photo
             self?.update(force: false, animated: true)
         }, failure: nil)

@@ -10,11 +10,16 @@ import  UIKit
 
 class MainCoordinator: BaseCoordinator <UINavigationController> {
 
+    typealias Dependencies = Any
+
+    private let dependencies: Dependencies
+
     let window: UIWindow
     let photoModule = MainModule()
 
-    init(window: UIWindow) {
+    init(window: UIWindow, dependencies: Dependencies = Services) {
         self.window = window
+        self.dependencies = dependencies
         let rootViewController = UINavigationController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
