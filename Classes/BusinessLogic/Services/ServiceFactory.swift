@@ -15,7 +15,7 @@ var Services: ServicesAlias { // swiftlint:disable:this variable_name
 }
 
 final class MainServicesFactory: ServicesAlias {
-    lazy var photoService: PhotoService = PhotoServiceImpl(dependencies: Services)
+    lazy var photoService: PhotoService = PhotoServiceImpl()
     lazy var requestFactory: RequestFactory = AppRequestFactory()
 }
 

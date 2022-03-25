@@ -9,18 +9,10 @@ import Foundation
 
 final class PhotoServiceImpl: AppRequestService, PhotoService {
 
-    typealias Dependencies = HasRequestFactory
     private var task: URLSessionDataTask? {
         willSet {
             task?.cancel()
         }
-    }
-
-    private let dependencies: Dependencies
-
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
-        super.init(requestFactory: dependencies.requestFactory)
     }
 
     func fetchPhotos(page: Int, success: (([Photo]) -> Void)?, failure: ((GeneralRequestError) -> Void)?) {

@@ -23,7 +23,6 @@
 		0C197E4127EB0B83009F03F8 /* PhotoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4027EB0B83009F03F8 /* PhotoEndpoint.swift */; };
 		0C197E4327EC4D5C009F03F8 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4227EC4D5C009F03F8 /* ServiceFactory.swift */; };
 		0C197E4527EC4DA9009F03F8 /* AppRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4427EC4DA9009F03F8 /* AppRequestService.swift */; };
-		0C197E4727EC4E41009F03F8 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C197E4627EC4E41009F03F8 /* AppConfigurator.swift */; };
 		0C20412827E9ECA500376015 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20412727E9ECA500376015 /* AppDelegate.swift */; };
 		0C20412A27E9ECA500376015 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20412927E9ECA500376015 /* SceneDelegate.swift */; };
 		0C20412C27E9ECA500376015 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C20412B27E9ECA500376015 /* MainViewController.swift */; };
@@ -80,7 +79,6 @@
 		0C197E4027EB0B83009F03F8 /* PhotoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEndpoint.swift; sourceTree = "<group>"; };
 		0C197E4227EC4D5C009F03F8 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		0C197E4427EC4DA9009F03F8 /* AppRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequestService.swift; sourceTree = "<group>"; };
-		0C197E4627EC4E41009F03F8 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		0C20412427E9ECA500376015 /* Photo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C20412727E9ECA500376015 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C20412927E9ECA500376015 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		0C20413B27E9EDDF00376015 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				0C197E4627EC4E41009F03F8 /* AppConfigurator.swift */,
 				0C20413C27E9EDE900376015 /* Models */,
 				0C20413D27E9EDF100376015 /* Services */,
 			);
@@ -448,7 +445,6 @@
 				0C197E3727EB0A15009F03F8 /* Header.swift in Sources */,
 				0C20415627E9F03300376015 /* MainCoordinator.swift in Sources */,
 				0C20414E27E9EF3900376015 /* MainViewModel.swift in Sources */,
-				0C197E4727EC4E41009F03F8 /* AppConfigurator.swift in Sources */,
 				0C197E3227EB0A15009F03F8 /* Endpoint.swift in Sources */,
 				0C20416E27E9FF8900376015 /* MainListItemsFactory.swift in Sources */,
 				0C197E3627EB0A15009F03F8 /* SessionTaskService.swift in Sources */,
