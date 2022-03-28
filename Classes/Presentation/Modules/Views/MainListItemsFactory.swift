@@ -16,7 +16,9 @@ final class MainListItemsFactory {
     func makeSectionItems(state: MainState) -> [GeneralCollectionViewDiffSectionItem] {
         for photo in state.photos {
             let ratio: CGFloat = CGFloat(photo.width) / CGFloat(photo.height)
-            let item = ImageCollectionViewCellItem(imageURL: photo.urls.regular,
+            let item = ImageCollectionViewCellItem(authorName: photo.user.name,
+                                                   imageBackgroundColor: photo.uiColor,
+                                                   imageURL: photo.urls.regular,
                                                    ratio: CGFloat(ratio))
             cellItems.append(item)
         }

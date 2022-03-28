@@ -18,10 +18,14 @@ final class ImageCollectionViewCellItem: CollectionViewDiffCellItem {
 
     let reuseType: ReuseType = .class(Cell.self)
 
+    private var authorName: String
+    private var imageBackgroundColor: UIColor?
     private var imageURL: String
     private var ratio: CGFloat
 
-    init(imageURL: String, ratio: CGFloat) {
+    init(authorName: String, imageBackgroundColor: UIColor?, imageURL: String, ratio: CGFloat) {
+        self.authorName = authorName
+        self.imageBackgroundColor = imageBackgroundColor
         self.imageURL = imageURL
         self.ratio = ratio
         diffIdentifier = UUID().uuidString
@@ -31,6 +35,8 @@ final class ImageCollectionViewCellItem: CollectionViewDiffCellItem {
         guard let cell = cell as? Cell else {
             return
         }
+        cell.authorLabel.text = authorName
+        cell.view.backgroundColor = imageBackgroundColor
         let url = URL(string: imageURL)
         cell.image.kf.setImage(with: url)
         cell.setNeedsLayout()
@@ -48,7 +54,9 @@ final class ImageCollectionViewCellItem: CollectionViewDiffCellItem {
 
         let lhs = self
         return lhs.diffIdentifier == rhs.diffIdentifier &&
-            lhs.imageURL == rhs.imageURL &&
-            lhs.ratio == rhs.ratio
+        lhs.authorName == rhs.authorName &&
+        lhs.imageBackgroundColor == rhs.imageBackgroundColor &&
+        lhs.imageURL == rhs.imageURL &&
+        lhs.ratio == rhs.ratio
     }
 }
