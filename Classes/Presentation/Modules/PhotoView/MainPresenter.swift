@@ -31,7 +31,7 @@ final class MainPresenter {
 
 extension MainPresenter: MainViewOutput {
     func viewDidLoad() {
-        dependencies.photoService.fetchPhotos(page: 2, success: { [weak self] photo in
+        dependencies.photoService.fetchPhotos(page: 1, success: { [weak self] photo in
             self?.state.photos = photo
             self?.update(force: false, animated: true)
         }, failure: nil)

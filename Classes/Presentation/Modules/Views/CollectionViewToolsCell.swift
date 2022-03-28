@@ -12,7 +12,7 @@ import CollectionViewTools
 final class ImageCollectionViewCell: UICollectionViewCell {
 
     private struct Constants {
-        static let authorLabelLeftInset: CGFloat = 5
+        static let authorLabelLeftInset: CGFloat = 15
         static let authorLAbelBottomInset: CGFloat = 15
     }
 
