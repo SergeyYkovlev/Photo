@@ -5,7 +5,6 @@
 //  Created by Сергей Яковлев on 23.03.2022.
 //
 
-import Foundation
 import UIKit
 
 final class Photo: Decodable {
@@ -15,6 +14,9 @@ final class Photo: Decodable {
     var color: String
     var user: User
     var urls: Urls
+    var uiColor: UIColor? {
+        return .init(hexString: color)
+    }
 }
 
 final class User: Decodable {
